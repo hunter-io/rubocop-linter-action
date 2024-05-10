@@ -3,7 +3,6 @@
 # requires ...................................................................
 require "webmock/rspec"
 require "json"
-require "pry"
 require "time"
 require "yaml"
 require "simplecov"
