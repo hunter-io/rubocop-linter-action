@@ -46,6 +46,7 @@ class RubocopLinterAction
     command = Command.new(config).build
     puts "Running command: #{command}"
     puts `ls -lha`
+    puts `git fetch --all`
     puts "Git diff: #{`git diff origin/master... --name-only --diff-filter=AM`}"
     command
   end
