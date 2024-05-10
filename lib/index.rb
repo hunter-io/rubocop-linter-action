@@ -43,7 +43,9 @@ class RubocopLinterAction
   end
 
   def command
-    Command.new(config).build
+    command = Command.new(config).build
+    puts "Running command: #{command}"
+    command
   end
 
   def report
