@@ -28,8 +28,8 @@ module Github
     def headers
       @headers ||= {
         "Content-Type": "application/json",
-        "Accept": "application/vnd.github.antiope-preview+json",
-        "Authorization": "Bearer #{github_token}",
+        Accept: "application/vnd.github.antiope-preview+json",
+        Authorization: "Bearer #{github_token}",
         "User-Agent": user_agent
       }
     end

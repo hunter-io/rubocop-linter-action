@@ -26,7 +26,7 @@ describe Command do
 
           it "uses base_branch for diff" do
             expect(command.build).to eq(
-              "git diff origin/develop... --name-only --diff-filter=AM | xargs "\
+              "git diff origin/develop... --name-only --diff-filter=AM | xargs " \
               "rubocop --parallel -f json"
             )
           end
@@ -35,7 +35,7 @@ describe Command do
         context "when base_branch is not specified" do
           it "defaults to origin/master" do
             expect(command.build).to eq(
-              "git diff origin/master... --name-only --diff-filter=AM | xargs "\
+              "git diff origin/master... --name-only --diff-filter=AM | xargs " \
               "rubocop --parallel -f json"
             )
           end
@@ -96,8 +96,8 @@ describe Command do
 
         it "returns built command" do
           expect(command.build).to eq(
-            "git diff origin/develop... --name-only --diff-filter=AM | xargs "\
-            "rubocop --parallel -f json "\
+            "git diff origin/develop... --name-only --diff-filter=AM | xargs " \
+            "rubocop --parallel -f json " \
             "--fail-level error -c .rubocop.yml --except Style/FrozenStringLiteralComment --force-exclusion"
           )
         end

@@ -37,6 +37,6 @@ class Install
   end
 
   def version_string(dependency, version)
-    version == "latest" ? dependency : "#{dependency}:#{version}"
+    (version == "latest") ? dependency : "#{dependency}:#{version}"
   end
 end

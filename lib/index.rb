@@ -7,16 +7,16 @@ require "time"
 require "yaml"
 
 # require relatives ..........................................................
-require_relative "./configuration"
-require_relative "./command"
-require_relative "./github/check_run_service"
-require_relative "./github/client"
-require_relative "./github/data"
-require_relative "./install"
-require_relative "./report"
-require_relative "./report_adapter"
-require_relative "./results"
-require_relative "./util"
+require_relative "configuration"
+require_relative "command"
+require_relative "github/check_run_service"
+require_relative "github/client"
+require_relative "github/data"
+require_relative "install"
+require_relative "report"
+require_relative "report_adapter"
+require_relative "results"
+require_relative "util"
 
 class RubocopLinterAction
   def self.run
